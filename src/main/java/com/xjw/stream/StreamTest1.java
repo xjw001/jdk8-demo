@@ -1,5 +1,6 @@
 package com.xjw.stream;
 
+import com.util.DateUtil;
 import org.junit.Test;
 
 import javax.annotation.PreDestroy;
@@ -12,9 +13,14 @@ import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 public class StreamTest1 {
+    static {
+        System.out.println("xxx");
+    }
 
     public static void main(String[] args) {
-        Stream.generate(()->Math.random()).limit(5).forEach(System.out::println);
+        System.out.println("1--"+ DateUtil.product);
+
+        System.out.println("2--");
     }
 
 
